@@ -6,7 +6,7 @@ str(my_etiquette)
 works = Works()
 works = Works(etiquette=my_etiquette)
 def fetch_issns():
-    with open('doienkoniec2.tsv') as f:
+    with open('doien_ga.tsv') as f:
         lines = f.readlines()[1:]  # skip line 1 (table headers)
 
         articles = []
@@ -40,7 +40,7 @@ def fetch_results():
 
 
 def write_to_file(results):
-    with open('doienkoniec2_ext.tsv', 'w') as f:
+    with open('doien_ga_ext.tsv', 'w') as f:
         for result in results:
             for index, item in enumerate(result):
                 if index < (len(result) - 1):
